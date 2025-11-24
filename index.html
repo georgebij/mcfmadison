@@ -2,353 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Madison Christian Fellowship</title>
+  <title>Madison Christian Fellowship | mcfmadison.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --primary: #003049;
-      --accent: #fca311;
-      --light: #f8f9fa;
-      --dark: #222222;
-    }
+  <meta name="description" content="Madison Christian Fellowship – a Christ-centered community in Madison, WI with a heart for the Indian community and all nations." />
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: #ffffff;
-      color: var(--dark);
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--primary);
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.75rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 1rem;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--primary), #1b4d79);
-      color: white;
-      padding: 4rem 1rem 3rem;
-    }
-
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 3vw + 1rem, 3rem);
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      margin-bottom: 1.5rem;
-      max-width: 35rem;
-    }
-
-    .hero-highlight {
-      margin-bottom: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--dark);
-      padding: 0.7rem 1.4rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      filter: brightness(0.95);
-    }
-
-    .hero-card {
-      background: rgba(248, 249, 250, 0.12);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(6px);
-    }
-
-    .hero-card h2 {
-      font-size: 1.1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-card p {
-      margin-bottom: 0.35rem;
-      font-size: 0.95rem;
-    }
-
-    .badge {
-      display: inline-block;
-      background: rgba(0,0,0,0.25);
-      padding: 0.25rem 0.75rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-    }
-
-    section {
-      padding: 3rem 1rem;
-    }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
-    }
-
-    .section-subtitle {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 2rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      border: 1px solid #e1e1e1;
-      background: var(--light);
-    }
-
-    .card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 0.8rem;
-      padding: 0.15rem 0.6rem;
-      border-radius: 999px;
-      background: #e1ecff;
-      color: #1b4d79;
-      margin-top: 0.35rem;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 2rem;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    ul li {
-      margin-bottom: 0.4rem;
-    }
-
-    .contact {
-      background: var(--light);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-      gap: 2rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    label {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 0.55rem 0.6rem;
-      border-radius: 0.4rem;
-      border: 1px solid #cccccc;
-      font-size: 0.95rem;
-      resize: vertical;
-    }
-
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 1.5rem 1rem;
-      font-size: 0.85rem;
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .footer-inner a {
-      color: #fca311;
-      text-decoration: none;
-    }
-
-    .footer-inner a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 800px) {
-      .hero-inner,
-      .two-column,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        display: none; /* keep simple for v1 */
-      }
-
-      header {
-        position: static;
-      }
-
-      .hero {
-        padding-top: 2.5rem;
-      }
-    }
-  </style>
+  <!-- LINK TO EXTERNAL CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
 
-  <!-- Header / Nav -->
+<body>
+  <!-- Header -->
   <header>
-    <div class="nav-container">
-      <div class="logo">Madison Christian Fellowship</div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#visit">Plan a Visit</a>
-        <a href="#ministries">Ministries</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container">
+      <div class="nav">
+        <div>
+          <div class="logo-text">MADISON CHRISTIAN FELLOWSHIP</div>
+          <div class="logo-sub">mcfmadison • Madison, Wisconsin</div>
+        </div>
+
+        <div class="nav-right">
+          <nav class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#ministries">Ministries</a>
+            <a href="#visit">Plan a Visit</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <button class="nav-cta" onclick="document.getElementById('visit').scrollIntoView({behavior:'smooth'})">
+            Plan your visit
+          </button>
+
+          <button class="menu-toggle" id="menuToggle">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-highlight">Welcome to Madison Christian Fellowship</div>
-        <h1>Sharing the love of Christ in Madison, WI</h1>
-        <p>
-          A warm, Christ-centered community with a special heart for the Indian community
-          and all nations. We gather for worship, Word, prayer, and fellowship—everyone is welcome.
-        </p>
-        <a href="#visit" class="btn">Plan Your Visit</a>
-      </div>
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-tagline">Jesus-centered • Bible-based • Welcoming community</div>
+          <h1 class="hero-title">
+            Sharing the love of <span>Christ</span> in Madison, WI
+          </h1>
+          <p class="hero-subtitle">
+            Madison Christian Fellowship (MCF) is a warm, Christ-centered church family with a special heart for the Indian community and people from every nation.
+          </p>
+          <p class="hero-langs">
+            Worship in <strong>English</strong> • <strong>Hindi</strong> • <strong>Malayalam</strong>
+          </p>
 
-      <div class="hero-card">
-        <h2>Gathering Time & Location</h2>
-        <p><strong>Sunday Worship:</strong> 10:00 AM – 12:00 PM</p>
-        <p><strong>Location:</strong> Madison, Wisconsin (Exact venue details here)</p>
-        <p><strong>Contact:</strong> Email / Phone here</p>
-        <span class="badge">Hindi • Malayalam • English</span>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="document.getElementById('visit').scrollIntoView({behavior:'smooth'})">Plan a Sunday visit</button>
+            <button class="btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request prayer</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-card">
+            <h3>Gathering Time</h3>
+            <p><strong>Sunday Worship:</strong> 10:00 AM – 12:00 PM</p>
+            <p><strong>Location:</strong> Madison, Wisconsin</p>
+            <p><strong>Contact:</strong> mcf email / phone</p>
+            <p><strong>Instagram:</strong> @mcfmadison</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about">
-    <div class="section-inner">
-      <h2 class="section-title">Who We Are</h2>
-      <p class="section-subtitle">
-        We are a Bible-believing Christian fellowship in Madison,
-        seeking to glorify Jesus and serve our city.
-      </p>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Who We Are</h2>
+        <p class="section-subtitle">
+          We are a Bible-believing church family in Madison, seeking to glorify Jesus and serve our city.
+        </p>
+      </div>
 
       <div class="two-column">
         <div>
           <h3>Our Vision</h3>
           <p>
-            To be a Christ-centered community where people from India and every nation
-            can encounter Jesus, grow as disciples, and be equipped to serve.
+            To be a Christ-centered community where people from India and all nations can encounter Jesus and grow as disciples.
           </p>
-          <h3 style="margin-top:1rem;">Our Values</h3>
+
+          <h3 style="margin-top: 1.2rem;">Our Values</h3>
           <ul>
-            <li>Christ at the center of everything</li>
-            <li>Word-based teaching and discipleship</li>
-            <li>Prayer, worship, and dependence on the Holy Spirit</li>
-            <li>Hospitality and genuine fellowship</li>
-            <li>Reaching the next generation and families</li>
+            <li>Christ-centered worship & life</li>
+            <li>Scripture as foundation</li>
+            <li>Prayer & dependence on the Holy Spirit</li>
+            <li>Hospitality and care</li>
+            <li>Reaching families & students</li>
           </ul>
         </div>
+
         <div>
           <div class="card">
-            <h3>What We Believe (briefly)</h3>
+            <h3>What We Believe</h3>
             <p>
-              We hold to the historic Christian faith: One God in three Persons,
-              salvation by grace through faith in Christ, the authority of the Bible,
-              and the call to live holy and loving lives.
+              We hold to the historic Christian faith: one God in three Persons, salvation by grace through faith in Jesus, the authority of Scripture, and life in the Holy Spirit.
             </p>
-            <span class="tag">Full statement coming soon</span>
           </div>
         </div>
       </div>
@@ -357,124 +116,111 @@
 
   <!-- Ministries -->
   <section id="ministries">
-    <div class="section-inner">
-      <h2 class="section-title">Ministries</h2>
-      <p class="section-subtitle">
-        Growing together in Christ through worship, Word, and fellowship.
-      </p>
-      <div class="grid">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Ministries</h2>
+      </div>
+
+      <div class="grid-3">
         <div class="card">
           <h3>Sunday Worship</h3>
-          <p>
-            A blend of Hindi, Malayalam, and English songs, prayer, and
-            Christ-centered teaching from the Bible.
-          </p>
+          <p>Worship, prayer, and Christ-centered preaching.</p>
         </div>
+
         <div class="card">
           <h3>Kids & Youth</h3>
-          <p>
-            Simple Bible lessons, songs, and activities to help children and youth know and love Jesus.
-          </p>
+          <p>Age-appropriate Bible teaching & activities.</p>
         </div>
+
         <div class="card">
           <h3>Prayer & Fellowship</h3>
-          <p>
-            Regular prayer times and home gatherings where we share, pray, and encourage one another.
-          </p>
+          <p>Regular times of worship and prayer in homes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Plan a Visit -->
+  <!-- Visit -->
   <section id="visit">
-    <div class="section-inner">
-      <h2 class="section-title">Plan a Visit</h2>
-      <p class="section-subtitle">
-        We would love to meet you and your family. Here’s what you can expect when you visit.
-      </p>
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Plan a Visit</h2>
+      </div>
 
       <div class="two-column">
-        <div>
+        <div class="card">
           <h3>What to Expect</h3>
           <ul>
-            <li>Friendly welcome and relaxed atmosphere</li>
-            <li>Songs and prayers in English, Hindi, and Malayalam</li>
-            <li>Bible-based message with practical application</li>
-            <li>Children are welcome in the service; simple activities may be provided</li>
-            <li>Tea / snacks and fellowship after the service (often!)</li>
+            <li>Friendly atmosphere</li>
+            <li>Worship in English, Hindi, Malayalam</li>
+            <li>Bible-based preaching</li>
+            <li>Tea & fellowship</li>
           </ul>
         </div>
-        <div>
-          <h3>Location & Parking</h3>
-          <p>
-            We meet in Madison, Wisconsin. Please contact us for the latest venue details
-            and parking information.
-          </p>
-          <p>
-            <strong>Google Maps link:</strong> (Add link here)
-          </p>
+
+        <div class="card">
+          <h3>Location</h3>
+          <p>Meeting venue updates on Instagram: @mcfmadison</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="section-inner">
-      <h2 class="section-title">Contact & Prayer Requests</h2>
-      <p class="section-subtitle">
-        If you have questions, need prayer, or want to know more, please reach out.
-      </p>
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Contact / Prayer</h2>
+      </div>
 
-      <div class="contact-grid">
+      <div class="two-column">
         <div>
-          <form>
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@example.com" />
-            </div>
-            <div>
-              <label for="message">Message / Prayer Request</label>
-              <textarea id="message" rows="4" placeholder="How can we serve you?"></textarea>
-            </div>
-            <button type="button" class="btn">
-              Send (placeholder – we can make this work later)
-            </button>
-          </form>
+          <div class="card">
+            <h3>Send a Message</h3>
+            <form onsubmit="alert('This is a demo. We will connect it to your email.'); return false;">
+              <label>Name</label>
+              <input type="text" />
+
+              <label>Email</label>
+              <input type="email" />
+
+              <label>Message</label>
+              <textarea></textarea>
+
+              <button class="btn-primary" type="submit">Send</button>
+            </form>
+          </div>
         </div>
 
         <div>
           <div class="card">
             <h3>Direct Contact</h3>
-            <p><strong>Email:</strong> your-email-here</p>
-            <p><strong>Phone / WhatsApp:</strong> your-number-here</p>
-            <p><strong>Instagram:</strong> @mcfmadison</p>
-            <p style="margin-top:0.75rem;">
-              Feel free to message us in English, Hindi, or Malayalam.
-            </p>
+            <p>Email: mcf email here</p>
+            <p>Phone: your number</p>
+            <p>Instagram: @mcfmadison</p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="footer-inner">
-      <div>© <span id="year"></span> Madison Christian Fellowship. All rights reserved.</div>
-      <div>Follow us on <a href="https://instagram.com/mcfmadison" target="_blank">Instagram</a></div>
+    <div class="container footer-inner">
+      © <span id="year"></span> Madison Christian Fellowship. All rights reserved.
     </div>
   </footer>
 
   <script>
-    // Set current year automatically
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile Menu
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("open");
+    });
   </script>
 </body>
 </html>
