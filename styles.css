@@ -56,6 +56,7 @@ header {
 /* Main nav bar container */
 .nav-container {
   display: flex;
+  position: relative;  /* important for mobile dropdown positioning */
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
@@ -829,5 +830,56 @@ footer {
   }
   .site-footer {
     padding: 2.5rem 1.2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Layout: logo + burger on one line */
+  .nav-container {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-left {
+    position: relative;
+  }
+
+  /* Hide links by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 100%;             /* directly under the header row */
+    right: 0;
+    margin-top: 0.5rem;
+    flex-direction: column;
+    min-width: 210px;
+    padding: 1rem 1.25rem;
+    background: #020617;   /* dark navy */
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.8);
+    display: none;         /* hidden until .open is added */
+    z-index: 999;
+  }
+
+  /* When JS adds .open, show the menu */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    padding: 0.4rem 0;
+  }
+
+  /* Make sure the hero content sits below header, not “under” it visually */
+  main,
+  .hero,
+  .page-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Show hamburger button on mobile */
+  .menu-toggle {
+    display: flex;
   }
 }
