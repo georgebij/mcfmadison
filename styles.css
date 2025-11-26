@@ -43,23 +43,26 @@ img {
 }
 
 /* ------------------ HEADER ------------------ */
-
 header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(0, 48, 73, 0.98);
+  background: rgba(0, 48, 73, 0.98); /* deep navy with slight transparency */
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
 }
 
+/* Main nav bar container */
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.65rem 0;
+  max-width: 1100px;          /* keeps header content in a nice box */
+  margin: 0 auto;
+  padding: 0.65rem 1.5rem;    /* some side padding */
 }
 
+/* Logo text block */
 .logo-text {
   font-weight: 700;
   color: #f9fafb;
@@ -73,39 +76,62 @@ header {
   color: rgba(249, 250, 251, 0.8);
 }
 
+/* Right side of nav (links + button) */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
+/* Links container */
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 0.92rem;
   color: #e5e7eb;
 }
 
+/* Individual links (base style) */
 .nav-links a {
   position: relative;
-  padding-bottom: 0.15rem;
+  padding-bottom: 0.2rem;
+  text-decoration: none;
+  color: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
 }
 
+/* Underline effect (hidden initially) */
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -0.15rem;
   width: 0;
   height: 2px;
-  background: var(--accent);
-  transition: width 0.2s ease-out;
+  background: var(--accent);      /* your gold accent */
+  transition: width 0.25s ease-out;
 }
 
+/* Hover underline */
 .nav-links a:hover::after {
   width: 100%;
 }
 
+/* Active page (keeps underline on) */
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Optional: slight color on hover/active */
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a.active {
+  color: #ffffff;
+}
+
+/* CTA button in nav (unchanged) */
 .nav-cta {
   font-size: 0.85rem;
   background: var(--accent);
@@ -157,6 +183,7 @@ header {
   transform: translateY(-4px) rotate(-45deg);
 }
 
+/* Buttons (unchanged) */
 .btn-primary {
   background: var(--accent);
   color: #111827;
