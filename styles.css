@@ -471,8 +471,8 @@ footer {
 }
 
 .hero-logo {
-  height: 120px;
-  margin-bottom: 1.4rem;
+  height: 170px;         /* was 120px */
+  margin-bottom: 1.6rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -510,7 +510,7 @@ footer {
 /* Mobile adjustments */
 @media (max-width: 480px) {
   .hero-logo {
-    height: 90px;
+    height: 120px;       /* smaller on phone so it fits nicely */
   }
   .hero h1 {
     font-size: 1.8rem;
