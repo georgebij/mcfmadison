@@ -613,7 +613,7 @@ footer {
 .visit-card p {
   font-size: 0.95rem;
   color: #475569;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.25rem;
   line-height: 1.6;
 }
 
@@ -631,6 +631,7 @@ footer {
   font-size: 0.9rem;
   text-decoration: none;
   margin-bottom: 0.9rem;
+  margin-top: 0.7rem;
   transition: 0.2s;
 }
 
