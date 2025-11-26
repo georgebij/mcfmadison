@@ -381,17 +381,9 @@ footer {
   .grid-3 {
     grid-template-columns: 1fr;
   }
-
-  .hero-card {
-    margin-top: -0.4rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
   section {
     padding: 2.4rem 0;
   }
