@@ -566,3 +566,85 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* -----------------------------
+   JOIN US THIS SUNDAY SECTION
+------------------------------*/
+
+.visit {
+  background: #ffffff;
+  padding: 4rem 1.5rem;
+}
+
+.visit-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.visit-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 2.2rem;
+}
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.visit-card {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  border-top: 4px solid #fca311;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.visit-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #0f172a;
+}
+
+.visit-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.visit-note {
+  margin-top: 0.7rem;
+  font-style: italic;
+}
+
+.visit-button {
+  display: inline-block;
+  background: #003049;
+  color: white;
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-bottom: 0.9rem;
+  transition: 0.2s;
+}
+
+.visit-button:hover {
+  background: #083a6e;
+}
+
+.visit-textonly {
+  margin-top: 0.4rem;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+}
