@@ -468,3 +468,101 @@ footer {
     padding: 0.7rem 1.6rem;
   }
 }
+
+/* -----------------------------
+   ABOUT / WELCOME SECTION
+------------------------------*/
+
+.about {
+  background: #f5f7fb;
+  padding: 4rem 1.5rem;
+}
+
+.about-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.7rem 1.6rem 1.5rem;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+  border-top: 4px solid #fca311;
+}
+
+.about-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  color: #0f172a;
+}
+
+.about-card p {
+  font-size: 0.96rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.about-list li {
+  position: relative;
+  padding-left: 1.3rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.about-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fca311;
+  font-weight: 700;
+}
+
+.about-note {
+  font-style: italic;
+  color: #334155;
+}
+
+/* Mobile & tablet */
+@media (max-width: 768px) {
+  .about {
+    padding: 3.2rem 1.25rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
