@@ -650,3 +650,91 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* -----------------------------
+   PLAN A VISIT SECTION
+------------------------------*/
+
+.plan {
+  background: #f5f7fb;
+  padding: 4rem 1.5rem;
+}
+
+.plan-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plan-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.plan-intro {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 720px;
+  margin: 0.5rem auto 2.5rem;
+  line-height: 1.7;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.6rem 1.25rem;
+  border-top: 4px solid #fca311;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.plan-card h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card p {
+  font-size: 0.94rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.plan-button-wrapper {
+  margin-top: 1.5rem;
+}
+
+.plan-button {
+  background: #003049;
+  color: white;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.plan-button:hover {
+  background: #083a6e;
+}
+
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+}
