@@ -43,6 +43,7 @@ img {
 }
 
 /* ------------------ HEADER ------------------ */
+
 header {
   position: sticky;
   top: 0;
@@ -53,42 +54,33 @@ header {
 }
 
 /* Main nav bar container */
-.nav {
+.nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1100px;          /* keeps header content in a nice box */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0.65rem 1.5rem;    /* some side padding */
+  padding: 0.65rem 1.5rem;
 }
 
-/* Logo text block */
-.logo-text {
-  font-weight: 700;
-  color: #f9fafb;
-  letter-spacing: 0.06em;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-}
-
-.logo-sub {
-  font-size: 0.7rem;
-  color: rgba(249, 250, 251, 0.8);
-}
-
-/* Right side of nav (links + button) */
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-/* Links container */
+/* LEFT: nav links */
+.nav-left .nav-links,
 .nav-links {
   display: flex;
-  gap: 1.5rem;
-  font-size: 0.92rem;
+  gap: 1.8rem;
+  font-size: 0.95rem;
   color: #e5e7eb;
+}
+
+/* RIGHT: logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 55px;
+  width: auto;
 }
 
 /* Individual links (base style) */
@@ -131,7 +123,7 @@ header {
   color: #ffffff;
 }
 
-/* CTA button in nav (unchanged) */
+/* CTA button in nav (if still used anywhere) */
 .nav-cta {
   font-size: 0.85rem;
   background: var(--accent);
