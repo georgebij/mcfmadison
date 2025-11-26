@@ -850,9 +850,11 @@ footer {
   }
 
   /* Show hamburger button on mobile */
-  .menu-toggle {
+    .menu-toggle {
     display: flex;
-    margin-left: auto;   /* pushes it toward the right side on mobile */
+    margin: 0 auto;         /* centers horizontally */
+    justify-content: center;
+    align-items: center;
   }
 }
 
