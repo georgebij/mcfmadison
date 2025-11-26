@@ -371,38 +371,6 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 52px;
-    right: 1.25rem;
-    background: rgba(15, 23, 42, 0.98);
-    padding: 0.7rem 1rem;
-    border-radius: 14px;
-    flex-direction: column;
-    gap: 0.6rem;
-    min-width: 180px;
-    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.45);
-    display: none;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-cta {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 480px) {
   section {
     padding: 2.4rem 0;
