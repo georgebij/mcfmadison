@@ -143,24 +143,27 @@ header {
 }
 
 /* Hamburger button */
+
 .menu-toggle {
-  display: none;
+  display: none;                 /* desktop: hidden */
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 4px;
   width: 34px;
   height: 34px;
   border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.7);
-  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(248, 250, 252, 0.9); /* lighter border */
+  background: rgba(15, 23, 42, 0.7);
   cursor: pointer;
   padding: 4px 7px;
 }
 
 .menu-toggle span {
+  width: 18px;                   /* make the lines clearly visible */
   height: 2px;
   border-radius: 999px;
-  background: #e5e7eb;
+  background: #f9fafb;           /* bright white lines */
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 }
 
@@ -849,5 +852,7 @@ footer {
   /* Show hamburger button on mobile */
   .menu-toggle {
     display: flex;
+    margin-left: auto;   /* pushes it toward the right side on mobile */
   }
+
 }
