@@ -631,12 +631,13 @@ footer {
   font-size: 0.9rem;
   text-decoration: none;
   margin-bottom: 0.9rem;
-  margin-top: 0.7rem;
+  margin-top: 0.9rem;
   transition: 0.2s;
 }
 
 .visit-button:hover {
   background: #083a6e;
+  color: #fca311;
 }
 
 .visit-textonly {
