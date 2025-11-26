@@ -471,7 +471,7 @@ footer {
 }
 
 .hero-logo {
-  height: 170px;         /* was 120px */
+  height: 190px;         /* was 170, 120px */
   margin-bottom: 1.6rem;
   display: block;
   margin-left: auto;
