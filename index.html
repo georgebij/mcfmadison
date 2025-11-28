@@ -356,11 +356,18 @@
     const navLinks = document.getElementById("navLinks");
 
     if (menuToggle && navLinks) {
-      menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", () => {
         menuToggle.classList.toggle("active");
         navLinks.classList.toggle("open");
       });
     }
+    // Auto-close menu when any nav link is clicked
+    document.querySelectorAll("#navLinks a").forEach(link => {
+        link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.classList.remove("active");
+      });
+    });
 
     // Contact Form - send via Formspree
     const contactForm = document.getElementById("contactForm");
