@@ -94,6 +94,61 @@ header {
   letter-spacing: 0.05em;
   font-weight: 500;
 }
+/*---- Christmass ---------------------*/
+/* Christmas Banner */
+.christmas-banner {
+  width: 100%;
+  text-align: center;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    #7a1c1c,
+    #b12b2b,
+    #7a1c1c
+  );
+  letter-spacing: 0.3px;
+}
+
+.christmas-banner .banner-verse {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 4px;
+  opacity: 0.95;
+}
+
+/* Mobile tweak */
+@media (max-width: 600px) {
+  .christmas-banner {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+}
+
+.christmas-image-banner {
+  display: flex;
+  justify-content: center;
+  background: #0b1a14; /* dark festive background */
+  padding: 20px 10px;
+}
+
+.christmas-image-banner img {
+  max-width: 420px;   /* perfect for square card */
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .christmas-image-banner {
+    padding: 14px 8px;
+  }
+}
 
 /* Underline effect (hidden initially) */
 .nav-links a::after {
