@@ -61,6 +61,7 @@
           <a href="#ministries">Ministries</a>
           <a href="#plan">Plan Your Visit</a>
           <a href="#contact">Contact</a>
+          <a href="devotionals.html">Devotionals</a>
         </div>
 
     </nav>
@@ -382,14 +383,17 @@
         menuToggle.classList.toggle("active");
         navLinks.classList.toggle("open");
       });
-    }
-    // Auto-close menu when any nav link is clicked
-    document.querySelectorAll("#navLinks a").forEach(link => {
-        link.addEventListener("click", () => {
+     // Optional: close menu after clicking a link (nice on mobile)
+    navLinks.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
         navLinks.classList.remove("open");
         menuToggle.classList.remove("active");
       });
     });
+  } else {
+    console.warn("Menu elements not found. Check IDs: menuToggle / navLinks");
+  }
+
 
     // Contact Form - send via Formspree
     const contactForm = document.getElementById("contactForm");
