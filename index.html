@@ -440,6 +440,51 @@
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("service-worker.js");
     }
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile Menu
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle("open");
+  });
+
+  // -------- Latest Devotional (Home) --------
+  async function loadLatestDevotional() {
+    const container = document.getElementById("devoLatest");
+    if (!container) return;
+
+    try {
+      const res = await fetch("data/devotionals.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("Could not load devotionals.json");
+
+      const items = await res.json();
+      if (!Array.isArray(items) || items.length === 0) {
+        container.innerHTML = `<p class="devo-loading">No devotionals yet.</p>`;
+        return;
+      }
+
+      // Sort newest first by date (YYYY-MM-DD)
+      items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+      const d = items[0];
+
+      const safe = (v) => (v ?? "").toString();
+      container.innerHTML = `
+        <div class="devo-meta">${safe(d.date)} • ${safe(d.scripture)}</div>
+        <h3 class="devo-h3">${safe(d.title)}</h3>
+        <p class="devo-text">${safe(d.summary)}</p>
+        <a class="devo-btn" href="devotionals.html#${encodeURIComponent(safe(d.id || d.date))}">
+          Read more
+        </a>
+      `;
+    } catch (err) {
+      container.innerHTML = `<p class="devo-loading">Unable to load devotional right now.</p>`;
+      console.error(err);
+    }
+  }
+
+  loadLatestDevotional();
 </script>
 
 </body>
