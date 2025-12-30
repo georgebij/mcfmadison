@@ -26,48 +26,19 @@
 
   <script>
     async function loadAllDevotionals() {
-      const list = document.getElementById("devoList");
-      try {
-        const res = await fetch("data/devotionals.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("Could not load devotionals.json");
-        const items = await res.json();
+      items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
-        if (!Array.isArray(items) || items.length === 0) {
-          list.innerHTML = `<p class="devo-loading">No devotionals yet.</p>`;
-          return;
-        }
+      const today = items[0];
+      const rest = items.slice(1);
 
-        items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-        const today = items[0];
-        const rest = items.slice(1);
-
-        const safe = (v) => (v ?? "").toString();
-
-        list.innerHTML = `
-          <h2 class="today-label">Today’s Devotional</h2>
-          ${renderDevotional(today)}
-          <h2 class="today-label">Previous Devotionals</h2>
-          ${rest.map(d => renderDevotional(d)).join("")}
-        `;
-
-          const anchor = encodeURIComponent(safe(d.id || d.date));
-          const paragraphs = safe(d.content).split("\\n\\n").map(p => `<p class="devo-text">${p}</p>`).join("");
-          const prayer = safe(d.prayer) ? `<p class="devo-text"><strong>Prayer:</strong> ${safe(d.prayer)}</p>` : "";
-
-          return `
-            <article id="${anchor}" class="devo-card" style="margin-bottom:1.2rem;">
-              <div class="devo-meta">${safe(d.date)} • ${safe(d.scripture)}</div>
-              <h3 class="devo-h3">${safe(d.title)}</h3>
-              ${paragraphs}
-              ${prayer}
-            </article>
-          `;
-        }).join("");
-      } catch (err) {
-        list.innerHTML = `<p class="devo-loading">Unable to load devotionals right now.</p>`;
-        console.error(err);
-      }
+      list.innerHTML = `
+        <h2 class="today-label">Today’s Devotional</h2>
+        ${renderDevotional(today)}
+        <h2 class="today-label">Previous Devotionals</h2>
+        ${rest.map(d => renderDevotional(d)).join("")}
+      `;
     }
+
     function renderDevotional(d) {
       const safe = (v) => (v ?? "").toString();
       const anchor = encodeURIComponent(safe(d.id || d.date));
