@@ -26,18 +26,35 @@
 
   <script>
     async function loadAllDevotionals() {
-      items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  const list = document.getElementById("devoList");
 
-      const today = items[0];
-      const rest = items.slice(1);
+  try {
+    const res = await fetch("./data/devotionals.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("Could not load devotionals.json");
 
-      list.innerHTML = `
-        <h2 class="today-label">Today’s Devotional</h2>
-        ${renderDevotional(today)}
-        <h2 class="today-label">Previous Devotionals</h2>
-        ${rest.map(d => renderDevotional(d)).join("")}
-      `;
+    const items = await res.json();
+
+    if (!Array.isArray(items) || items.length === 0) {
+      list.innerHTML = `<p class="devo-loading">No devotionals yet.</p>`;
+      return;
     }
+
+    items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+
+    const today = items[0];
+    const rest = items.slice(1);
+
+    list.innerHTML = `
+      <h2 class="today-label">Today’s Devotional</h2>
+      ${renderDevotional(today)}
+      <h2 class="today-label">Previous Devotionals</h2>
+      ${rest.map(d => renderDevotional(d)).join("")}
+    `;
+  } catch (err) {
+    list.innerHTML = `<p class="devo-loading">Unable to load devotionals.</p>`;
+    console.error(err);
+  }
+}
 
     function renderDevotional(d) {
       const safe = (v) => (v ?? "").toString();
