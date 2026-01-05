@@ -1,4 +1,6 @@
-/* Root variables */
+/* ==============================
+   ROOT VARIABLES
+============================== */
 :root {
   --primary: #003049;
   --primary-soft: #0b3f66;
@@ -11,7 +13,10 @@
   --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.12);
 }
 
-/* Base global styling */
+/* ==============================
+   BASE RESET & GLOBALS
+============================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,8 +47,9 @@ img {
   padding: 0 1.25rem;
 }
 
-/* ------------------ HEADER ------------------ */
-
+/* ==============================
+   HEADER & DESKTOP NAV
+============================== */
 header {
   position: sticky;
   top: 0;
@@ -99,7 +105,7 @@ header {
   letter-spacing: 0.05em;
   font-weight: 500;
 }
-/*---- Christmass ---------------------*/
+/*---- sessional greetings ---------------------*/
 /* Christmas Banner 
 .christmas-banner {
   width: 100%;
@@ -156,7 +162,7 @@ header {
   }
 }
 */
-/*------------------above is for christmas banner------------------*/
+/*------------------above is for sessional greetings------------------*/
 
 /* Underline effect (hidden initially) */
 .nav-links a::after {
