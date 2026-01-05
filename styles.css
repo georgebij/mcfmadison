@@ -75,6 +75,11 @@ header {
 
 /* RIGHT: logo */
 .logo {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
   display: flex;
   align-items: center;
 }
@@ -870,11 +875,23 @@ footer {
   }
 
   /* show hamburger on mobile */
+
+  .menu-toggle {
+  position: relative;
+  z-index: 2000;
+}
+
   .menu-toggle {
     display: flex;
   }
 
   /* hide links by default on mobile */
+.nav-left {
+  position: relative;
+  z-index: 1;
+}
+
+
   .nav-left .nav-links,
   .nav-links {
     display: none;
