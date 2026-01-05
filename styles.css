@@ -1011,3 +1011,45 @@ footer {
   color: #003049;
   font-weight: 600;
 }
+
+/* ==============================
+   FORCE MOBILE HAMBURGER CLICK
+   (Final authoritative override)
+============================== */
+@media (max-width: 768px) {
+
+  header.site-header {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Force hamburger to be on top and clickable */
+  #menuToggle {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    z-index: 9999;
+    pointer-events: auto;
+  }
+
+  /* Prevent nav-left from blocking clicks */
+  .nav-left {
+    pointer-events: none;
+  }
+
+  /* Restore pointer events ONLY for links when menu is open */
+  .nav-links {
+    pointer-events: auto;
+  }
+
+  /* Ensure logo does not block */
+  .logo {
+    pointer-events: none;
+  }
+
+  /* When menu is open, allow clicking links */
+  .nav-links.open a {
+    pointer-events: auto;
+  }
+}
