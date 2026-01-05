@@ -172,3 +172,92 @@ footer {
   }
 }
 
+
+/* -----------------------------
+   DEVOTIONAL (Latest on Home)
+------------------------------*/
+.devo {
+  background: #ffffff;
+  padding: 4rem 1.5rem;
+}
+
+.devo-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.devo-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.devo-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.devo-all {
+  text-decoration: none;
+  color: #003049;
+  font-weight: 600;
+}
+
+.devo-all:hover {
+  text-decoration: underline;
+}
+
+.devo-card {
+  background: #f8fafc;
+  border-radius: 1rem;
+  padding: 1.6rem;
+  border-top: 4px solid #fca311;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.devo-meta {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.4rem;
+}
+
+.devo-h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.6rem;
+  color: #0f172a;
+}
+
+.devo-text {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 0 0.9rem;
+}
+
+.devo-btn {
+  display: inline-block;
+  background: #003049;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.devo-btn:hover {
+  background: #083a6e;
+}
+
+.devo-loading {
+  margin: 0;
+  color: #64748b;
+}
+
+.today-label {
+  margin: 1.2rem 0 0.6rem;
+  color: #003049;
+  font-weight: 600;
+}
