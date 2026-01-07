@@ -962,6 +962,19 @@ footer {
   color: #003049;
   font-weight: 600;
 }
+/* Devotional back link */
+.devotional-header {
+  background: #003049;
+  padding: 0.75rem 1rem;
+}
+
+.back-home {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
 /* ==============================
    MOBILE NAVIGATION – FINAL (LEFT SLIDE)
    ============================== */
