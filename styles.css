@@ -966,24 +966,29 @@ footer {
 /* Devotion Audio Player */
 
 .devotion-audio {
-  margin: 14px 0 24px;
+  margin: 16px 0 24px !important;
   padding: 12px 14px;
-  border-radius: 10px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(148, 163, 184, 0.25);
+  min-height: 72px;
+  border-radius: 12px;
+  background: #6b7280; /* stable gray */
 }
 
 .audio-label {
   margin: 0 0 6px;
   font-size: 0.85rem;
-  color: #cbd5f5;
+  color: #f8fafc;
 }
 
 .devotion-audio audio {
+  display: block;
   width: 100%;
 }
 
-
+.devotion-audio * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  
 /* Devotional back link */
 .devotional-header {
   background: #003049;
