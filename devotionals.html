@@ -75,29 +75,45 @@
   }
 }
 
-    function renderDevotional(d) {
-      const safe = (v) => (v ?? "").toString();
-      const anchor = encodeURIComponent(safe(d.id || d.date));
-      const paragraphs = safe(d.content)
-        .split("\\n\\n")
-        .map(p => `<p class="devo-text">${p}</p>`)
-        .join("");
-      const prayer = safe(d.prayer)
-        ? `<p class="devo-text"><strong>Prayer:</strong> ${safe(d.prayer)}</p>`
-        : "";
 
-      return `
-        <article id="${anchor}" class="devo-card" style="margin-bottom:1.2rem;">
-          <div class="devo-meta">${safe(d.date)} • ${safe(d.scripture)}</div>
-          <h3 class="devo-h3">${safe(d.title)}</h3>
-          ${paragraphs}
-          ${prayer}
-        </article>
-      `;
-    }
+function renderDevotional(d) {
+  const safe = (v) => (v ?? "").toString();
+  const anchor = encodeURIComponent(safe(d.id || d.date));
 
-    loadAllDevotionals();
-  </script>
+  const paragraphs = safe(d.content)
+    .split("\n\n")
+    .map(p => `<p class="devo-text">${p}</p>`)
+    .join("");
+
+  const prayer = safe(d.prayer)
+    ? `<p class="devo-text"><strong>Prayer:</strong> ${safe(d.prayer)}</p>`
+    : "";
+
+  const audioBlock = d.audio
+    ? `
+      <section class="devotion-audio">
+        <p class="audio-label">🔊 Listen to this devotion</p>
+        <audio controls preload="none">
+          <source src="${safe(d.audio)}" type="audio/mp4">
+          <source src="${safe(d.audio)}" type="audio/mpeg">
+          Your browser does not support audio playback.
+        </audio>
+      </section>
+    `
+    : "";
+
+  return `
+    <article id="${anchor}" class="devo-card" style="margin-bottom:1.2rem;">
+      <div class="devo-meta">${safe(d.date)} • ${safe(d.scripture)}</div>
+      <h3 class="devo-h3">${safe(d.title)}</h3>
+      ${audioBlock}
+      ${paragraphs}
+      ${prayer}
+    </article>
+  `;
+}
+  loadAllDevotionals();
+</script>
 
 </body>
 </html>
