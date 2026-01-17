@@ -1001,6 +1001,19 @@ footer {
   font-size: 0.9rem;
   letter-spacing: 0.05em;
 }
+/* --------CONTINUOUS AUDIO PLAYER-----*/
+.continuous-audio {
+  margin: 20px 0 28px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #003049;
+}
+
+.continuous-audio .audio-label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+/*----------continuous audio player end---------*/
 
 /* ==============================
    MOBILE NAVIGATION – FINAL (LEFT SLIDE)
