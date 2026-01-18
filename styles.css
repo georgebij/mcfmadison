@@ -931,6 +931,12 @@ footer {
   margin: 0 0 0.6rem;
   color: #0f172a;
 }
+.devo-scripture {
+  margin: 6px 0 14px;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #003049;
+}
 
 .devo-text {
   color: #475569;
